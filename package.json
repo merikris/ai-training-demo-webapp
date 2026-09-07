@@ -1,0 +1,30 @@
+{
+  "name": "ai-training-demo-webapp",
+  "version": "1.0.0",
+  "description": "Synthetic e-commerce demo app for AI-assisted quality training exercises.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --watchman=false",
+    "test:stable": "jest --watchman=false --testPathIgnorePatterns=checkoutFlow.test.js"
+  },
+  "keywords": [
+    "training",
+    "quality",
+    "demo",
+    "ecommerce"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "clearMocks": true
+  }
+}
