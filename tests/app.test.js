@@ -6,7 +6,14 @@ describe('createApp', () => {
     const app = createApp({
       productRepository: {
         listProductCatalog: jest.fn().mockResolvedValue([
-          { id: 'keyboard-01', name: 'Compact Keyboard', priceCents: 4990 }
+          {
+            id: 'summer-01',
+            name: 'Ilus suveõhtu',
+            priceCents: 4990,
+            priceLabel: '3 päikeselaiku',
+            description: 'Soe valgus',
+            image: '/assets/summer-evening.png'
+          }
         ])
       }
     });
@@ -15,7 +22,16 @@ describe('createApp', () => {
       .get('/api/products')
       .expect(200)
       .expect({
-        products: [{ id: 'keyboard-01', name: 'Compact Keyboard', priceCents: 4990 }]
+        products: [
+          {
+            id: 'summer-01',
+            name: 'Ilus suveõhtu',
+            priceCents: 4990,
+            priceLabel: '3 päikeselaiku',
+            description: 'Soe valgus',
+            image: '/assets/summer-evening.png'
+          }
+        ]
       });
   });
 
@@ -24,8 +40,11 @@ describe('createApp', () => {
       productRepository: {
         findProductById: jest.fn().mockResolvedValue({
           id: 'mouse-02',
-          name: 'Wireless Mouse',
-          priceCents: 2990
+          name: 'Rahulik hommik',
+          priceCents: 2990,
+          priceLabel: '1 soe kohv + 2 vaikset minutit',
+          description: 'Väike vaikusevaru',
+          image: '/assets/peaceful-morning.png'
         })
       }
     });
@@ -34,7 +53,14 @@ describe('createApp', () => {
       .get('/api/products/mouse-02')
       .expect(200)
       .expect({
-        product: { id: 'mouse-02', name: 'Wireless Mouse', priceCents: 2990 }
+        product: {
+          id: 'mouse-02',
+          name: 'Rahulik hommik',
+          priceCents: 2990,
+          priceLabel: '1 soe kohv + 2 vaikset minutit',
+          description: 'Väike vaikusevaru',
+          image: '/assets/peaceful-morning.png'
+        }
       });
   });
 

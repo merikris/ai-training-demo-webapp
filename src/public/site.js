@@ -8,9 +8,13 @@ async function loadProducts() {
       const euros = (product.priceCents / 100).toFixed(2);
       return `
         <article class="product">
-          <h2>${product.name}</h2>
-          <p>${euros} EUR</p>
-          <button type="button" data-product-id="${product.id}">Submit order</button>
+          <img src="${product.image}" alt="" class="product-image">
+          <div class="product-copy">
+            <h2>${product.name}</h2>
+            <p class="description">${product.description}</p>
+            <p class="price">${product.priceLabel || `${euros} EUR`}</p>
+          </div>
+          <button type="button" data-product-id="${product.id}">Telli õnn koju</button>
         </article>
       `;
     })
@@ -58,7 +62,7 @@ async function submitOrder(product) {
     return;
   }
 
-  status.textContent = `Order confirmed: ${result.orderId}`;
+  status.textContent = `Tellimus kinnitatud: ${result.orderId}`;
 }
 
 loadProducts();

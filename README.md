@@ -1,6 +1,6 @@
-# AI Training Demo Webapp
+# Õnnepood
 
-Small synthetic e-commerce app for AI-assisted software quality training. The app uses fake products, fake users, and fake orders only.
+Small synthetic e-commerce app for AI-assisted software quality training. The app sells fake abstract products, uses fake users, and creates fake orders only.
 
 ## Local Setup
 
@@ -48,4 +48,4 @@ The file `.github/copilot-instructions.md` is intentionally not included because
 
 ## Reproducing The Order Bug (Trainer Note)
 
-In the running app, submit an order for `Limited Stock Headphones`, or POST an order containing product id `backorder-01` to `/api/orders`.
+In the running app, submit an order for `Viimane talvevalgus`, or POST an order containing product id `backorder-01` to `/api/orders`.

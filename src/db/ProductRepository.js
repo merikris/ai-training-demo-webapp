@@ -1,8 +1,36 @@
 const products = [
-  { id: 'backorder-01', name: 'Limited Stock Headphones', priceCents: 7990 },
-  { id: 'keyboard-01', name: 'Compact Keyboard', priceCents: 4990 },
-  { id: 'mouse-02', name: 'Wireless Mouse', priceCents: 2990 },
-  { id: 'stand-03', name: 'Laptop Stand', priceCents: 3990 }
+  {
+    id: 'summer-01',
+    name: 'Ilus suveõhtu',
+    priceCents: 4990,
+    priceLabel: '3 päikeselaiku',
+    description: 'Soe valgus, pikad varjud ja tunne, et homme võib oodata.',
+    image: '/assets/summer-evening.png'
+  },
+  {
+    id: 'morning-02',
+    name: 'Rahulik hommik',
+    priceCents: 2990,
+    priceLabel: '1 soe kohv + 2 vaikset minutit',
+    description: 'Väike vaikusevaru enne seda, kui maailm liiga valjuks läheb.',
+    image: '/assets/peaceful-morning.png'
+  },
+  {
+    id: 'winter-03',
+    name: 'Lumine talv',
+    priceCents: 3990,
+    priceLabel: '7 lumehelvest',
+    description: 'Krõbe õhk, pehme valgus ja täiesti põhjendamatu optimism.',
+    image: '/assets/snowy-winter.png'
+  },
+  {
+    id: 'backorder-01',
+    name: 'Viimane talvevalgus',
+    priceCents: 7990,
+    priceLabel: 'üks haruldane hingetõmme',
+    description: 'Väga piiratud kogus. Müüja väidab, et seda tuleb hoida kahe käega.',
+    image: '/assets/winter-light.png'
+  }
 ];
 
 function createMemoryDb(seedProducts = products) {
@@ -26,14 +54,14 @@ function createMemoryDb(seedProducts = products) {
 function createProductRepository(db = createMemoryDb()) {
   async function listProductCatalog() {
     return db.all(
-      'select id, name, price_cents as priceCents from products order by name',
+      'select id, name, price_cents as priceCents, price_label as priceLabel, description, image from products order by name',
       []
     );
   }
 
   async function findProductById(productId) {
     return db.get(
-      'select id, name, price_cents as priceCents from products where id = ?',
+      'select id, name, price_cents as priceCents, price_label as priceLabel, description, image from products where id = ?',
       [productId]
     );
   }

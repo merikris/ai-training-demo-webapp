@@ -5,8 +5,11 @@ describe('ProductRepository', () => {
     const repository = createProductRepository();
     await expect(repository.findProductById('backorder-01')).resolves.toEqual({
       id: 'backorder-01',
-      name: 'Limited Stock Headphones',
-      priceCents: 7990
+      name: 'Viimane talvevalgus',
+      priceCents: 7990,
+      priceLabel: 'üks haruldane hingetõmme',
+      description: 'Väga piiratud kogus. Müüja väidab, et seda tuleb hoida kahe käega.',
+      image: '/assets/winter-light.png'
     });
   });
 
@@ -40,7 +43,7 @@ describe('ProductRepository', () => {
     await repository.listProductCatalog();
 
     expect(db.all).toHaveBeenCalledWith(
-      'select id, name, price_cents as priceCents from products order by name',
+      'select id, name, price_cents as priceCents, price_label as priceLabel, description, image from products order by name',
       []
     );
   });
@@ -55,7 +58,7 @@ describe('ProductRepository', () => {
       id: 'keyboard-01'
     });
     expect(db.get).toHaveBeenCalledWith(
-      'select id, name, price_cents as priceCents from products where id = ?',
+      'select id, name, price_cents as priceCents, price_label as priceLabel, description, image from products where id = ?',
       ['keyboard-01']
     );
   });
