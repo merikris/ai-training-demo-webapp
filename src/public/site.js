@@ -10,12 +10,13 @@ async function loadProducts() {
   products.innerHTML = catalog
     .map((product) => {
       const euros = (product.priceCents / 100).toFixed(2);
+      const description = product.description ? `<p class="description">${product.description}</p>` : '';
       return `
         <article class="product">
           <img src="${product.image}" alt="" class="product-image">
           <div class="product-copy">
             <h2>${product.name}</h2>
-            <p class="description">${product.description}</p>
+            ${description}
             <p class="price">${product.priceLabel || `${euros} EUR`}</p>
           </div>
           <button type="button" data-add-product="${product.id}">Lisa korvi</button>

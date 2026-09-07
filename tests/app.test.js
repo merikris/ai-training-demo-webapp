@@ -7,12 +7,12 @@ describe('createApp', () => {
       productRepository: {
         listProductCatalog: jest.fn().mockResolvedValue([
           {
-            id: 'summer-01',
-            name: 'Suveõhtu ilma sääskedeta',
-            priceCents: 4990,
-            priceLabel: '3 päikeselaiku + üks vaba terrassilaud',
-            description: 'Soe valgus',
-            image: '/assets/summer-evening.png'
+            id: 'gold-touch-01',
+            name: 'Iga metall, mida puudutan, muutub kullaks',
+            priceCents: 5000,
+            priceLabel: '50 kükki igal hommikul',
+            description: '',
+            image: '/assets/golden-touch.png'
           }
         ])
       }
@@ -24,12 +24,12 @@ describe('createApp', () => {
       .expect({
         products: [
           {
-            id: 'summer-01',
-            name: 'Suveõhtu ilma sääskedeta',
-            priceCents: 4990,
-            priceLabel: '3 päikeselaiku + üks vaba terrassilaud',
-            description: 'Soe valgus',
-            image: '/assets/summer-evening.png'
+            id: 'gold-touch-01',
+            name: 'Iga metall, mida puudutan, muutub kullaks',
+            priceCents: 5000,
+            priceLabel: '50 kükki igal hommikul',
+            description: '',
+            image: '/assets/golden-touch.png'
           }
         ]
       });
@@ -40,11 +40,11 @@ describe('createApp', () => {
       productRepository: {
         findProductById: jest.fn().mockResolvedValue({
           id: 'mouse-02',
-          name: 'Hommik, kus Teams ei avane ise',
-          priceCents: 2990,
-          priceLabel: '1 soe kohv + 14 lugemata kirja vähem',
-          description: 'Väike vaikusevaru',
-          image: '/assets/peaceful-morning.png'
+          name: 'Tean iga roa valgusisaldust, kui seda näen',
+          priceCents: 3000,
+          priceLabel: 'üks kuu ilma kastmeta friikateta',
+          description: '',
+          image: '/assets/oracle-plate.png'
         })
       }
     });
@@ -55,11 +55,11 @@ describe('createApp', () => {
       .expect({
         product: {
           id: 'mouse-02',
-          name: 'Hommik, kus Teams ei avane ise',
-          priceCents: 2990,
-          priceLabel: '1 soe kohv + 14 lugemata kirja vähem',
-          description: 'Väike vaikusevaru',
-          image: '/assets/peaceful-morning.png'
+          name: 'Tean iga roa valgusisaldust, kui seda näen',
+          priceCents: 3000,
+          priceLabel: 'üks kuu ilma kastmeta friikateta',
+          description: '',
+          image: '/assets/oracle-plate.png'
         }
       });
   });
@@ -116,7 +116,7 @@ describe('createApp', () => {
       .send({
         cart: {
           userId: 'demo-user',
-          items: [{ productId: 'backorder-01', qty: 1, priceCents: 7990 }]
+          items: [{ productId: 'backorder-01', qty: 1, priceCents: 10000 }]
         },
         paymentInfo: {
           token: 'tok_synthetic',

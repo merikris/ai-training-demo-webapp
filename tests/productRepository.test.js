@@ -5,11 +5,11 @@ describe('ProductRepository', () => {
     const repository = createProductRepository();
     await expect(repository.findProductById('backorder-01')).resolves.toEqual({
       id: 'backorder-01',
-      name: 'Viimane talvevalgus enne 16:00',
-      priceCents: 7990,
-      priceLabel: 'üks haruldane hingetõmme + töökorras laadija',
-      description: 'Väga piiratud kogus. Müüja soovitab seda mitte demo ajal maha pillata.',
-      image: '/assets/winter-light.png'
+      name: 'Saan teleporteeruda igasse WC-sse, kus olen kunagi käinud',
+      priceCents: 10000,
+      priceLabel: 'kord nädalas teen süüa 10 võõrale',
+      description: '',
+      image: '/assets/wc-portal.png'
     });
   });
 
