@@ -1,34 +1,34 @@
 const products = [
   {
     id: 'summer-01',
-    name: 'Ilus suveõhtu',
+    name: 'Suveõhtu ilma sääskedeta',
     priceCents: 4990,
-    priceLabel: '3 päikeselaiku',
-    description: 'Soe valgus, pikad varjud ja tunne, et homme võib oodata.',
+    priceLabel: '3 päikeselaiku + üks vaba terrassilaud',
+    description: 'Soe valgus, pikad varjud ja grill, mis läheb esimese tikuga põlema.',
     image: '/assets/summer-evening.png'
   },
   {
     id: 'morning-02',
-    name: 'Rahulik hommik',
+    name: 'Hommik, kus Teams ei avane ise',
     priceCents: 2990,
-    priceLabel: '1 soe kohv + 2 vaikset minutit',
-    description: 'Väike vaikusevaru enne seda, kui maailm liiga valjuks läheb.',
+    priceLabel: '1 soe kohv + 14 lugemata kirja vähem',
+    description: 'Vaikne algus, kus kalender korraks teeskleb, et ta on sinu sõber.',
     image: '/assets/peaceful-morning.png'
   },
   {
     id: 'winter-03',
-    name: 'Lumine talv',
+    name: 'Lumi, mis ei muutu lörtsiks',
     priceCents: 3990,
-    priceLabel: '7 lumehelvest',
-    description: 'Krõbe õhk, pehme valgus ja täiesti põhjendamatu optimism.',
+    priceLabel: '7 lumehelvest + kuivad sokid',
+    description: 'Krõbe õhk, ilus tänav ja saapad, mis ei anna poolel teel alla.',
     image: '/assets/snowy-winter.png'
   },
   {
     id: 'backorder-01',
-    name: 'Viimane talvevalgus',
+    name: 'Viimane talvevalgus enne 16:00',
     priceCents: 7990,
-    priceLabel: 'üks haruldane hingetõmme',
-    description: 'Väga piiratud kogus. Müüja väidab, et seda tuleb hoida kahe käega.',
+    priceLabel: 'üks haruldane hingetõmme + töökorras laadija',
+    description: 'Väga piiratud kogus. Müüja soovitab seda mitte demo ajal maha pillata.',
     image: '/assets/winter-light.png'
   }
 ];

@@ -48,4 +48,4 @@ The file `.github/copilot-instructions.md` is intentionally not included because
 
 ## Reproducing The Order Bug (Trainer Note)
 
-In the running app, submit an order for `Viimane talvevalgus`, or POST an order containing product id `backorder-01` to `/api/orders`.
+In the running app, submit an order for `Viimane talvevalgus enne 16:00`, or POST an order containing product id `backorder-01` to `/api/orders`.

@@ -13,8 +13,21 @@
         <h1>Õnnepood</h1>
         <p>Väike riiulitäis asju, mida päris elus tahaks tellida, aga mille tarneaeg on kahtlaselt poeetiline.</p>
       </section>
-      <section class="products" id="products" aria-label="Products"></section>
-      <p class="order-status" id="order-status" role="status" aria-live="polite"></p>
+      <div class="shop-grid">
+        <section class="products" id="products" aria-label="Products"></section>
+        <aside class="cart-panel" aria-label="Ostukorv">
+          <div class="cart-heading">
+            <p class="eyebrow">Ostukorv</p>
+            <strong id="cart-count">0 asja</strong>
+          </div>
+          <div class="cart-items" id="cart-items"></div>
+          <div class="cart-footer">
+            <p class="cart-total" id="cart-total">Kokku: 0 tunnet</p>
+            <button type="button" class="checkout-button" id="checkout-button" disabled>Kinnita tellimus</button>
+            <p class="order-status" id="order-status" role="status" aria-live="polite"></p>
+          </div>
+        </aside>
+      </div>
     </main>
     <script src="/site.js"></script>
   </body>

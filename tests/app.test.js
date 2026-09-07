@@ -8,9 +8,9 @@ describe('createApp', () => {
         listProductCatalog: jest.fn().mockResolvedValue([
           {
             id: 'summer-01',
-            name: 'Ilus suveõhtu',
+            name: 'Suveõhtu ilma sääskedeta',
             priceCents: 4990,
-            priceLabel: '3 päikeselaiku',
+            priceLabel: '3 päikeselaiku + üks vaba terrassilaud',
             description: 'Soe valgus',
             image: '/assets/summer-evening.png'
           }
@@ -25,9 +25,9 @@ describe('createApp', () => {
         products: [
           {
             id: 'summer-01',
-            name: 'Ilus suveõhtu',
+            name: 'Suveõhtu ilma sääskedeta',
             priceCents: 4990,
-            priceLabel: '3 päikeselaiku',
+            priceLabel: '3 päikeselaiku + üks vaba terrassilaud',
             description: 'Soe valgus',
             image: '/assets/summer-evening.png'
           }
@@ -40,9 +40,9 @@ describe('createApp', () => {
       productRepository: {
         findProductById: jest.fn().mockResolvedValue({
           id: 'mouse-02',
-          name: 'Rahulik hommik',
+          name: 'Hommik, kus Teams ei avane ise',
           priceCents: 2990,
-          priceLabel: '1 soe kohv + 2 vaikset minutit',
+          priceLabel: '1 soe kohv + 14 lugemata kirja vähem',
           description: 'Väike vaikusevaru',
           image: '/assets/peaceful-morning.png'
         })
@@ -55,9 +55,9 @@ describe('createApp', () => {
       .expect({
         product: {
           id: 'mouse-02',
-          name: 'Rahulik hommik',
+          name: 'Hommik, kus Teams ei avane ise',
           priceCents: 2990,
-          priceLabel: '1 soe kohv + 2 vaikset minutit',
+          priceLabel: '1 soe kohv + 14 lugemata kirja vähem',
           description: 'Väike vaikusevaru',
           image: '/assets/peaceful-morning.png'
         }
