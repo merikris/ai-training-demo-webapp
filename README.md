@@ -6,6 +6,12 @@ Small synthetic e-commerce app for AI-assisted software quality training. The ap
 
 Most Session 2 exercises only need the GitHub web UI, so participants do not need to clone the repository unless they want to run the app or tests locally.
 
+**Zero-install option (unverified — test before relying on it live):** try opening
+`https://stackblitz.com/github/merikris/ai-training-demo-webapp` in a browser. If it
+boots, no local Node install is needed. This was not confirmed working before the
+first delivery of Session 2 — verify it yourself ahead of time, and fall back to the
+local setup below if it doesn't load.
+
 ```bash
 npm install
 npm start
