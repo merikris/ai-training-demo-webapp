@@ -31,7 +31,8 @@ npm run test:stable
 | --- | --- |
 | `demo-scenarios/order-service-bug/` | ChatGPT diagnosis and bug-report exercise |
 | `demo-scenarios/flaky-checkout-test/` | Parallel assistant debugging exercise |
-| `demo-scenarios/api-spec/` | Claude Project test-case generation exercise |
+| `demo-scenarios/api-spec/` | Claude Project test-case generation exercise (option B) |
+| `demo-scenarios/claude-project-testplan/` | Claude Project exercise fallback document (option A) |
 
 ## Notes For Reuse
 
