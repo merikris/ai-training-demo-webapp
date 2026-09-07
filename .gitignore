@@ -4,3 +4,4 @@ coverage/
 .env
 npm-debug.log*
 /.codex-build
+deck-output/
