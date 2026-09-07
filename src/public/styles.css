@@ -64,3 +64,10 @@ button {
   font-weight: 700;
   cursor: pointer;
 }
+
+.order-status {
+  min-height: 24px;
+  margin-top: 24px;
+  color: #52606d;
+  font-weight: 700;
+}

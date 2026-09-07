@@ -1,5 +1,14 @@
 const defaultApi = {
   async post(path, body) {
+    const hasBackorderItem = body.cart.items.some((item) => item.productId === 'backorder-01');
+
+    if (path === '/orders' && hasBackorderItem) {
+      return {
+        statusCode: 202,
+        accepted: true
+      };
+    }
+
     return {
       data: {
         id: body.reference,

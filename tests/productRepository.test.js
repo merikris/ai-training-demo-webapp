@@ -1,6 +1,15 @@
 const { createMemoryDb, createProductRepository } = require('../src/db/ProductRepository');
 
 describe('ProductRepository', () => {
+  test('default catalog includes the limited stock product', async () => {
+    const repository = createProductRepository();
+    await expect(repository.findProductById('backorder-01')).resolves.toEqual({
+      id: 'backorder-01',
+      name: 'Limited Stock Headphones',
+      priceCents: 7990
+    });
+  });
+
   test('createMemoryDb returns products ordered by name', async () => {
     const db = createMemoryDb([
       { id: 'b', name: 'Beta', priceCents: 200 },

@@ -81,4 +81,23 @@ describe('createApp', () => {
       .expect(400)
       .expect({ error: 'Order could not be confirmed' });
   });
+
+  test('POST /api/orders returns the generic error for limited stock orders', async () => {
+    const app = createApp();
+
+    await request(app)
+      .post('/api/orders')
+      .send({
+        cart: {
+          userId: 'demo-user',
+          items: [{ productId: 'backorder-01', qty: 1, priceCents: 7990 }]
+        },
+        paymentInfo: {
+          token: 'tok_synthetic',
+          billingPostalCode: '10115'
+        }
+      })
+      .expect(500)
+      .expect({ error: 'Unexpected demo shop error' });
+  });
 });

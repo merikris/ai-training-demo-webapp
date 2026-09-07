@@ -1,4 +1,5 @@
 const products = [
+  { id: 'backorder-01', name: 'Limited Stock Headphones', priceCents: 7990 },
   { id: 'keyboard-01', name: 'Compact Keyboard', priceCents: 4990 },
   { id: 'mouse-02', name: 'Wireless Mouse', priceCents: 2990 },
   { id: 'stand-03', name: 'Laptop Stand', priceCents: 3990 }

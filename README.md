@@ -38,3 +38,7 @@ npm run test:stable
 This repository is intentionally generic and not client-branded. Do not add real client data, production credentials, or private training material.
 
 The file `.github/copilot-instructions.md` is intentionally not included because participants create it during one exercise.
+
+## Reproducing The Order Bug (Trainer Note)
+
+In the running app, submit an order for `Limited Stock Headphones`, or POST an order containing product id `backorder-01` to `/api/orders`.
