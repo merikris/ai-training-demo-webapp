@@ -54,6 +54,8 @@ npm run test:stable
 | `demo-scenarios/flaky-checkout-test/` | Parallel assistant debugging exercise |
 | `demo-scenarios/api-spec/` | Claude Project test-case generation exercise (option B) |
 | `demo-scenarios/claude-project-testplan/` | Claude Project exercise fallback document (option A) |
+| `demo-scenarios/duplicate-bug-triage/` | 3-tool group exercise fallback (option A) |
+| `demo-scenarios/test-summary-notes/` | 3-tool group exercise fallback (option B) |
 
 ## Browser-Only Exercise Path
 
@@ -84,6 +86,23 @@ what extra evidence would you look for, and how would you write a clear bug repo
 1. Open `demo-scenarios/api-spec/orders-spec.md` in GitHub.
 2. Copy the spec into Claude Project, ChatGPT, or Copilot Chat.
 3. Ask for positive, negative, boundary, and missing-field test cases for `POST /api/orders`.
+
+### Duplicate Bug Triage (3-tool group exercise, option A)
+
+1. Open `demo-scenarios/duplicate-bug-triage/README.md` in GitHub for the three raw
+   bug reports.
+2. One group member per tool (ChatGPT, Copilot Chat, Claude) — ask each whether the
+   three reports describe the same bug and why.
+3. Merge into one report with a single root-cause hypothesis.
+
+### Test Summary Writing (3-tool group exercise, option B)
+
+1. Open `demo-scenarios/test-summary-notes/README.md` in GitHub for the raw testing
+   notes.
+2. One group member per tool — ask each to turn the notes into a clear ticket
+   comment.
+3. Compare: which summary clearly separates the cosmetic bug from the
+   security-relevant finding?
 
 ## Notes For Reuse
 
