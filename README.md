@@ -12,11 +12,20 @@ for any exercise that just needs the running shop (e.g. the ChatGPT bug-discover
 exercise). It does not give you a terminal, so it can't run the test suite — for
 that you still need a local checkout (below).
 
+No-IDE browser flow:
+
+1. Open the repo in GitHub: `https://github.com/merikris/ai-training-demo-webapp`
+2. Open the running demo app: `https://ai-training-demo-webapp-production.up.railway.app/`
+3. Use the relevant folder under `demo-scenarios/` as the exercise starting point.
+4. Use GitHub Copilot Chat in the GitHub web UI, ChatGPT, or Claude with the copied file/spec content.
+
 **Zero-install, in-browser terminal (unverified — test before relying on it live):**
 try opening `https://stackblitz.com/github/merikris/ai-training-demo-webapp` in a
 browser. If it boots, you get a terminal without installing Node locally. This was
 not confirmed working before the first delivery of Session 2 — verify it yourself
 ahead of time, and fall back to the local setup below if it doesn't load.
+
+Local setup is only needed for participants who want to run the app or tests themselves:
 
 ```bash
 npm install
@@ -45,6 +54,36 @@ npm run test:stable
 | `demo-scenarios/flaky-checkout-test/` | Parallel assistant debugging exercise |
 | `demo-scenarios/api-spec/` | Claude Project test-case generation exercise (option B) |
 | `demo-scenarios/claude-project-testplan/` | Claude Project exercise fallback document (option A) |
+
+## Browser-Only Exercise Path
+
+Use this path when participants do not have VS Code, local Node.js, or an IDE available.
+
+### OrderService Bug Diagnosis
+
+1. Open the hosted app: `https://ai-training-demo-webapp-production.up.railway.app/`
+2. Add a few products to the cart and submit a normal order.
+3. Try edge-case products until the app returns `Unexpected demo shop error`.
+4. Open `demo-scenarios/order-service-bug/OrderService.js` in GitHub.
+5. Ask Copilot Chat in GitHub, ChatGPT, or Claude to diagnose this symptom:
+
+```text
+The hosted demo shop returns "Unexpected demo shop error" when one product is submitted.
+Review OrderService.js, especially submitOrder around line 153. What is the likely root cause,
+what extra evidence would you look for, and how would you write a clear bug report?
+```
+
+### Flaky Checkout Test Diagnosis
+
+1. Open `demo-scenarios/flaky-checkout-test/checkoutFlow.test.js` in GitHub.
+2. Ask two assistants in parallel what could make this test fail intermittently.
+3. Compare whether they notice the fixed wait and suggest a condition-based wait instead.
+
+### API Test-Case Generation
+
+1. Open `demo-scenarios/api-spec/orders-spec.md` in GitHub.
+2. Copy the spec into Claude Project, ChatGPT, or Copilot Chat.
+3. Ask for positive, negative, boundary, and missing-field test cases for `POST /api/orders`.
 
 ## Notes For Reuse
 
