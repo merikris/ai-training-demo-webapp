@@ -6,11 +6,17 @@ Small synthetic e-commerce app for AI-assisted software quality training. The ap
 
 Most Session 2 exercises only need the GitHub web UI, so participants do not need to clone the repository unless they want to run the app or tests locally.
 
-**Zero-install option (unverified — test before relying on it live):** try opening
-`https://stackblitz.com/github/merikris/ai-training-demo-webapp` in a browser. If it
-boots, no local Node install is needed. This was not confirmed working before the
-first delivery of Session 2 — verify it yourself ahead of time, and fall back to the
-local setup below if it doesn't load.
+**Live app (verified):** [ai-training-demo-webapp-production.up.railway.app](https://ai-training-demo-webapp-production.up.railway.app/)
+is a working deployment — no install, no clone, just open it in a browser. Use this
+for any exercise that just needs the running shop (e.g. the ChatGPT bug-discovery
+exercise). It does not give you a terminal, so it can't run the test suite — for
+that you still need a local checkout (below).
+
+**Zero-install, in-browser terminal (unverified — test before relying on it live):**
+try opening `https://stackblitz.com/github/merikris/ai-training-demo-webapp` in a
+browser. If it boots, you get a terminal without installing Node locally. This was
+not confirmed working before the first delivery of Session 2 — verify it yourself
+ahead of time, and fall back to the local setup below if it doesn't load.
 
 ```bash
 npm install
