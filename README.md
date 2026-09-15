@@ -56,6 +56,7 @@ npm run test:stable
 | `demo-scenarios/claude-project-testplan/` | Claude Project exercise fallback document (option A) |
 | `demo-scenarios/duplicate-bug-triage/` | 3-tool group exercise fallback, track A (no code needed) |
 | `demo-scenarios/test-summary-notes/` | Optional bonus scenario — not part of the main 2-track exercise, kept for reuse |
+| `demo-scenarios/session-3-fallback-pakk/` | Session 3 fallback material (Gemini Notebook / Atlassian AI / Projects exercises) — spec, test plan, bug report, API description, sample Jira tickets |
 
 ## Browser-Only Exercise Path
 
