@@ -1,0 +1,6 @@
+Test ID,Test Summary,Test Type,Priority,Precondition,Step,Action,Data,Expected Result
+TC-01,Broneeringu loomine kehtivate andmetega,Manual,High,"Kasutaja on avanud toa lehe (""Book now"")",1,Valige saabumise ja lahkumise kuupäev kalendrist,Saabumine = täna + 7 päeva; lahkumine = täna + 9 päeva,Hinnakokkuvõttes on 2 ööd ja õige koguhind
+TC-01,,,,,2,"Vajutage ""Reserve Now""",,Avaneb vorm väljadega Firstname; Lastname; Email; Phone
+TC-01,,,,,3,Sisestage ees- ja perenimi,Eesnimi = Õie; perenimi = Tamm,Väljad aktsepteerivad täpitähti
+TC-01,,,,,4,Sisestage e-post ja telefon,E-post = oie.tamm@example.com; telefon = +37255512345,Välju ei märgita vigaseks
+TC-01,,,,,5,"Vajutage uuesti ""Reserve Now""",,Kuvatakse kinnitus; broneering on admin-paneelis nähtav õigete kuupäevadega
