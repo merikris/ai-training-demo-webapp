@@ -14,7 +14,19 @@ Vt `0_Postmani_nouded_alguspunkt.md` (sammud 1–3, sealhulgas valmis prompt).
 
 ## Harjutus 1 — Nõuetest testideni
 
-**Samm 1 (lüngad):**
+**Nõuete mustand on valmis** (`1_Broneeringu_nouded_mustand.md`) — keegi ei kirjuta nõudeid.
+Mõlemad loevad sama faili. Paaris töötate esimesed 4 minutit samal ajal:
+
+- **A (ilma AI-ta):** lugege failist `1_Broneeringu_nouded_mustand.md` nõudeid
+  **2.2, 2.4, 3.4, 4.1, 5.1, 6.1 ja 7.1**. Kirjutage iga piiri kohta tabelirida:
+  *nõue | alla piiri | piiril | üle piiri | oodatav tulemus* (nt 2.2 | 13 ööd | 14 ööd | 15 ööd |
+  13 ja 14 lubatud, 15 keelatud). Kui oodatavat tulemust ei saa nõude põhjal kirja panna,
+  kirjutage „?“ — see on küsimus analüütikule.
+- **B (AI-ga):** kleepige AI-le kogu nõuete fail ja allolev prompt „Samm 1“.
+
+Nii saate hiljem võrrelda, mida kumbki leidis. Väljundi näidis: slaid „Näidis: Harjutus 1 väljund“.
+
+**Samm 1 (B — lüngad):**
 ```
 Oled kogenud testianalüütik. Lisatud on broneerimismooduli nõuete mustand.
 Leia sellest:
@@ -35,7 +47,9 @@ Märgi iga rida, mis sõltub vastamata küsimusest.
 
 **Samm 4 (järjestamine):**
 ```
-Siin on meie testiideede nimekiri: <kleepige>.
+Siin on meie testiideed kahest allikast:
+(1) A käsitsi koostatud piirväärtuste nimekiri: <kleepige>
+(2) AI otsustustabel ja edge case'id eelmisest sammust: <kleepige>
 Järjesta need äririski järgi (mis läheb kliendile või ettevõttele kõige rohkem maksma).
 Märgi duplikaadid ja testid, mis ei kontrolli tegelikult ühtegi nõuet. Põhjenda ühe lausega.
 ```
@@ -90,26 +104,28 @@ juhtum | nõue | oodatav | tegelik | viga? (jah/ei/vaieldav) + ühe lause põhje
 
 ---
 
-## Praktika 2 — AI-toega brauseritest
+## Praktika 2 — AI-agent testib brauseris
 
-```
-Koosta Playwright-test (TypeScript) lehele https://automationintesting.online:
-1. ava esimese toa „Book now“,
-2. vali saabumine ja lahkumine (2 ööd),
-3. vajuta „Reserve Now“, täida vorm (Firstname, Lastname, Email, Phone) sünteetiliste andmetega ja vajuta uuesti „Reserve Now“,
-4. kontrolli, et kinnitus kuvatakse ja hinnakokkuvõte = 2 ööd.
-Kasuta rollipõhiseid lokaatoreid (getByRole, getByPlaceholder — vormiväljadel on ainult placeholder'id), mitte CSS-klasse.
-Lisa teine test: lahkumine enne saabumist — mida me ootame ja mida leht teeb?
-```
-Selenide'i kasutajad: lisage „kirjuta see Java + Selenide + TestNG testina“.
+Stsenaariumid: `7_Brauseri_stsenaariumid.md`. Kirjutage S5 enne käivitamist ise valmis.
 
-**Visuaalne test:**
+**Tööriist (üks neist):**
+- **Claude in Chrome** — Chrome'i/Edge'i laiendus; ka Claude Code'ist (`claude --chrome`)
+- **ChatGPT Browser** — ChatGPT töölauarakenduses või veebis, viidake `@Browser` (ei tööta Codex CLI-s)
+- **GitHub Copilot** — VS Code'i agendirežiimis, integreeritud brauser (organisatsioon võib selle välja lülitada)
+
+**Prompt** (lisage stsenaariumide fail):
 ```
-Lisa samale lehele visuaalne test Playwrighti toHaveScreenshot() abil:
-baasjoon lauaarvuti (1280×800) ja mobiili (390×844) vaates. Seejärel muuda
-kuupäevi ja käivita uuesti. Selgita, mis erinevus on päris regressioon ja mis
-oodatud muudatus. Dokumentatsioon: https://playwright.dev/docs/test-snapshots
+Oled testija. Ava brauseris https://automationintesting.online.
+Käi läbi lisatud failis olevad stsenaariumid S1–S5 täpselt nagu päris kasutaja:
+klõpsa, täida vorme, loe tulemust. Kasuta ainult failis olevaid testandmeid.
+Iga stsenaariumi kohta kirjuta tabelirida:
+ID | ✅ või ❌ | mida sa lehel tegelikult nägid | tõend (ekraanipilt või täpne tekst lehelt).
+Ära märgi ✅, kui sa ei näinud oodatud tulemust ise lehel.
+S4 jaoks tee ekraanipilt lauaarvuti (~1280 px) ja mobiili (~390 px) laiuses ja kirjelda erinevusi.
+Lõpus loetle, millised stsenaariumid olid ebaselged või mida sa ei saanud kontrollida.
 ```
+
+Pärast: korrake üks ❌ ise käsitsi — kas viga on päris või eksis agent?
 
 ---
 

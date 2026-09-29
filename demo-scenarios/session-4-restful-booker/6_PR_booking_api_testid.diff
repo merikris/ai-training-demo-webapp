@@ -1,6 +1,6 @@
 PR #42: Lisa broneerimise API regressioonitestid + päevaraporti võrdluskontroll
 Autor: testija (AI abiga kirjutatud)
-Kirjeldus: "Kõik testid on rohelised ✅ Palun kiire review, tahaks täna merge'ida."
+Kirjeldus: "Eile õhtul läksid minu masinas kõik testid roheliseks ✅ Palun kiire review, tahaks täna merge'ida."
 
 diff --git a/tests/test_booking_api.py b/tests/test_booking_api.py
 new file mode 100644

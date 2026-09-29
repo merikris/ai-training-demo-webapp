@@ -48,10 +48,16 @@ olulisem osa: agent ehitab täpselt seda, mis spetsifikatsioonis kirjas on.
 
 **Reegel:** agent saab töö alles siis, kui SPEC.md on valmis ja üle loetud.
 
+**Oluline:** lubage agendil selles kaustas faile muuta ilma iga kord küsimata
+(agendi seadetes / käivitamisel valitav õiguste režiim). Muidu jääb agent esimese
+loa küsimise juures seisma ja pausiks pole midagi valmis.
+
 Lisage spetsifikatsioonile kindlasti need nõuded:
 
 - **curl käivitatakse argumentide listina, mitte shelli stringina** (muidu võivad
   jutumärgid või `&` päises rakenduse katki teha või käivitada soovimatu käsu)
+- Soovitus: **Python + Tkinter, ilma lisapakettideta** (töötab Windowsis ja Macis, ei vaja
+  npm-i ega suuri allalaadimisi) — kui teil on oma eelistus, kasutage seda
 - Andmed salvestatakse lokaalselt JSON-faili
 - README koos käivitamisjuhisega
 - Rakendus peab töötama teie masinas (Windows/Mac) — öelge see agendile

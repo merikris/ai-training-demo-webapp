@@ -42,7 +42,7 @@ API testkasutaja on avalikult dokumenteeritud: `admin` / `password123` (`POST /a
 | `1_Broneeringu_nouded_mustand.md` | Harjutus 1 — Nõuetest testideeni | A |
 | `2_Testjuhtumite_CSV_mall.csv` | Praktika 1 — Testdokumentatsioon | B |
 | `3_API_testi_kontrollnimekiri.md` | Harjutus 2 — API-test oma curl-rakendusega | C |
-| (fail puudub — kasutage UI-d) | Praktika 2 — AI-toega brauseritest | C |
+| `7_Brauseri_stsenaariumid.md` | Praktika 2 — AI-agent testib brauseris | C |
 | `4_Paevaraport_vana.csv`, `4_Paevaraport_uus.csv`, `4_Muudatuse_kirjeldus.md` | Harjutus 3 — Raportite võrdlus | D |
 | `5_Regressioonikomplekt.md`, `5_Ebaonnestunud_testid.md` | Harjutus 4 — Regressioonivalik + triaaž | D |
 | `6_PR_booking_api_testid.diff` | Praktika 3 — PR review | E |

@@ -26,6 +26,7 @@ Ideid alustamiseks:
 - Puuduv kohustuslik väli
 - Olematu kuupäev (nt 30. veebruar)
 - Muutmine või kustutamine ilma tokenita
+- Sisselogimine vale parooliga — mida vastus tegelikult ütleb?
 - Väga pikk nimi, täpitähed, jutumärgid nimes
 
 ## Testige ka oma rakendust
